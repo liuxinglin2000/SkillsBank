@@ -1,0 +1,1 @@
+{"version":3,"file":"nil.js","sourceRoot":"","sources":["../../src/fileSelectors/nil.ts"],"names":[],"mappings":";;;AAEa,QAAA,eAAe,GAAwB;IAClD,IAAI,EAAE,KAAK;IACX,aAAa,EAAE,KAAK;IACpB,MAAM;QACJ,OAAO,EAAE,CAAC;IACZ,CAAC;IACD,eAAe;QACb,OAAO,EAAE,CAAC;IACZ,CAAC;IACD,KAAK,CAAC,SAAS,CAAC,IAAyB,EAAE,QAA6B;QACtE,OAAO,KAAK,CAAC;IACf,CAAC;CACF,CAAC"}
