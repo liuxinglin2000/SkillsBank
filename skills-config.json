@@ -1,0 +1,43 @@
+{
+  "代码Review": {
+    "type": "skill",
+    "click": "show_window",
+    "skill_file": "src/skill/代码Review.txt"
+  },
+  "活动开发": {
+    "type": "menu",
+    "list": [
+      {
+        "活动功能Review": {
+          "type": "skill",
+          "click": "activity.review"
+        }
+      },
+      {
+        "活动功能联调": {
+          "type": "skill",
+          "click": "activity.debug"
+        }
+      },
+      {
+        "子菜单示例": {
+          "type": "menu",
+          "list": [
+            {
+              "子项A": {
+                "type": "skill",
+                "click": "submenu.a"
+              }
+            },
+            {
+              "子项B": {
+                "type": "skill",
+                "click": "submenu.b"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

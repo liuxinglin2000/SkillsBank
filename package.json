@@ -1,0 +1,65 @@
+{
+  "name": "skillsbank",
+  "displayName": "SkillsBank",
+  "description": "Sidebar skill/menu list powered by JSON config.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "skillsBank.refresh",
+        "title": "SkillsBank: Refresh"
+      },
+      {
+        "command": "skillsBank.openConfig",
+        "title": "SkillsBank: Open Config"
+      },
+      {
+        "command": "skillsBank.skillClick",
+        "title": "SkillsBank: Skill Click"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "skillsBank",
+          "title": "SkillsBank",
+          "icon": "resources/skillsbank.svg"
+        }
+      ]
+    },
+    "views": {
+      "skillsBank": [
+        {
+          "id": "skillsBankView",
+          "name": "Skills List"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "skillsBank.refresh",
+          "when": "view == skillsBankView",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.5"
+  }
+}
