@@ -393,7 +393,7 @@ async function showSkillWindow(
   <div class="block-title">发送给 AI 的内容</div>
   <pre>${escapeHtml(skillPrompt)}</pre>
   <div class="toolbar" style="margin-top: 12px;">
-    <button id="runBtn" type="button">执行技能</button>
+    <button id="runBtn" type="button" style="width: 100%;">执行技能</button>
   </div>
   <div class="block-title">AI 回答</div>
   <textarea id="aiAnswer" readonly>点击“执行技能”后显示回答</textarea>
@@ -488,7 +488,9 @@ async function showSkillWindow(
 
     running = true;
     panel.webview.postMessage({ type: "aiProgress" });
-    const promptToSend = buildAgentPrompt(skillPrompt, fileSelectorState.selectedFiles);
+    const promptToSend = fileSelectorState.promptOverride?.trim()
+      ? `${skillPrompt.trim()}\n\n${fileSelectorState.promptOverride}`
+      : buildAgentPrompt(skillPrompt, fileSelectorState.selectedFiles);
 
     try {
       const aiReply = await askCursorAgent(

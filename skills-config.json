@@ -3,7 +3,7 @@
     "type": "skill",
     "click": "show_window",
     "agent_mode": "auto",
-    "file_select_mode": "free",
+    "file_select_mode": "git_changed",
     "skill_file": "src/skill/代码Review.txt"
   },
   "活动开发": {
@@ -17,7 +17,17 @@
           "file_select_mode": "nil",
           "skill_file": "src/skill/活动开发/步骤一.txt"
         }
+      },
+      {
+        "步骤2：修改文件": {
+          "type": "skill",
+          "click": "show_window",
+          "agent_mode": "auto",
+          "file_select_mode": "free",
+          "skill_file": "src/skill/活动开发/步骤一.txt"
+        }
       }
     ]
   }
 }
+

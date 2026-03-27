@@ -10,11 +10,13 @@
 // 在这里注册一行
 // 主流程不用改
 import { freeFileSelector } from "./free";
+import { gitChangedFileSelector } from "./gitChanged";
 import { nilFileSelector } from "./nil";
 import { FileSelectorHandler } from "./types";
 
 const registry: Record<string, FileSelectorHandler> = {
   [freeFileSelector.mode]: freeFileSelector,
+  [gitChangedFileSelector.mode]: gitChangedFileSelector,
   [nilFileSelector.mode]: nilFileSelector
 };
 

@@ -19,6 +19,7 @@ export interface FileSelectorMessage {
 
 export interface FileSelectorState {
   selectedFiles: string[];
+  promptOverride?: string;
 }
 
 export interface FileSelectorContext {
